@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubmittedViewController" customModule="Akensie" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="laS-py-fg0" id="OBp-6d-hEg"/>
+                <outlet property="checkmark" destination="9gL-qO-mUh" id="XuR-YN-FqE"/>
+                <outlet property="congratsLabel" destination="jnE-1l-mUI" id="sDv-mj-W7L"/>
+                <outlet property="doneButton" destination="GOU-ht-XE5" id="UFu-ry-HoM"/>
+                <outlet property="statusLabel" destination="73B-h1-UCO" id="tMe-zV-Eab"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submitting, please wait" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73B-h1-UCO">
+                    <rect key="frame" x="20" y="436.5" width="374" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="laS-py-fg0">
+                    <rect key="frame" x="20" y="479.5" width="374" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOU-ht-XE5">
+                    <rect key="frame" x="40" y="697" width="334" height="55"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.16078431369999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="yhj-TT-fML"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Done"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="doneTapped:" destination="-1" eventType="touchUpInside" id="MkH-30-Be7"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9gL-qO-mUh">
+                    <rect key="frame" x="187" y="480" width="40" height="39"/>
+                    <color key="tintColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="HB5-CN-bwN"/>
+                        <constraint firstAttribute="width" constant="40" id="yfh-Xr-PUs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've earned 200 points." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-1l-mUI">
+                    <rect key="frame" x="20" y="555" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="9gL-qO-mUh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F8q-ho-HmK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="73B-h1-UCO" secondAttribute="trailing" constant="20" id="HvP-YM-Tf8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GOU-ht-XE5" secondAttribute="bottom" constant="110" id="Ktv-Ek-hWm"/>
+                <constraint firstItem="laS-py-fg0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="N2f-sK-1f8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GOU-ht-XE5" secondAttribute="trailing" constant="40" id="Ntc-jM-S25"/>
+                <constraint firstItem="jnE-1l-mUI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Rr6-yT-0Fd"/>
+                <constraint firstItem="jnE-1l-mUI" firstAttribute="top" secondItem="9gL-qO-mUh" secondAttribute="bottom" constant="35.5" id="Rui-gh-zDy"/>
+                <constraint firstItem="73B-h1-UCO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Uz8-qT-V9t"/>
+                <constraint firstItem="9gL-qO-mUh" firstAttribute="top" secondItem="73B-h1-UCO" secondAttribute="bottom" constant="20" id="WGd-I2-jaj"/>
+                <constraint firstItem="laS-py-fg0" firstAttribute="top" secondItem="73B-h1-UCO" secondAttribute="bottom" constant="20" id="ZDe-Gk-emY"/>
+                <constraint firstItem="73B-h1-UCO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="f8H-o9-Dqu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="laS-py-fg0" secondAttribute="trailing" constant="20" id="lNu-ON-D0b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jnE-1l-mUI" secondAttribute="trailing" constant="20" id="p7g-lu-OB5"/>
+                <constraint firstItem="GOU-ht-XE5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="xIM-DP-F4a"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
